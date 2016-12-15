@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
    <head>
-      <title>欢迎访问联华技术</title>
+      <title>联华技术</title>
    </head>
    <body>
-        <img id="myimage" onclick="nextImage()" src="images/introduce/幻灯片1.png" />
+        <img id="myimage" onclick="nextImage()" src="images/introduce/1.png" />
    </body>
    <script>
    var index=1;
@@ -13,7 +13,7 @@
         index++;
         if(index > 26)
             index=1;
-        var image="images/introduce/幻灯片" + index + ".png";
+        var image="images/introduce/" + index + ".png";
         element=document.getElementById("myimage");
         element.src=image;
    }
