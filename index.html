@@ -4,15 +4,25 @@
       <title>联华技术</title>
    </head>
    <body>
-        <img id="myimage" onclick="nextImage()" src="images/introduce/1.PNG" />
-   </body>
+      <p align="center">
+        <img id="myimage" onclick="nextImage(1)" src="images/introduce/1.PNG" />
+      </p>
+
+      <p align="center">
+        <input type="button" value="上一页" align="left" onclick=nextImage(-1) />
+        <input type="button" align="center" value="下一页" onclick=nextImage(1) />
+      </p>
+    </body>
+
    <script>
    var index=1;
-   function nextImage()
+   function nextImage(step)
    {
-        index++;
+        index += step;
         if(index > 26)
             index=1;
+        if (index < 1)
+            index=26;
         var image="images/introduce/" + index + ".PNG";
         element=document.getElementById("myimage");
         element.src=image;
