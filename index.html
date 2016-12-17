@@ -33,6 +33,8 @@
                 index=1;
             if (index < 1)
                 index=26;
+            if (index == 10)
+                index +=step;
             var image="images/introduce/" + index + ".PNG";
             element=document.getElementById("myimage");
             element.src=image;
